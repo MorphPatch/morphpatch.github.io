@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="Project page for MorphPatch: Enhancing VR Interaction on Shape Displays using Surface Approximation and Visuo-Haptic Illusions.">
+  <meta name="author" content="Wen Ying">
+  <meta name="keywords" content="MorphPatch,Virtual Reality,Shape Display,Visuo-Haptic Illusion,Surface Approximation,Wen Ying">
+
+  <title>MorphPatch: Shape Displays for VR Interaction</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="css/style.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+</head>
+
+<body class="project-page morphpatch-page">
+  <div class="container-fluid">
+    <nav class="project-nav col-wrapper">
+      <a href="https://wy-blacksheep.github.io/">Wen Ying</a>
+      <span>/</span>
+      <span>MorphPatch</span>
+    </nav>
+
+    <header class="project-hero sec-wrapper">
+      <div class="row justify-content-center">
+        <div class="col col-wrapper text-center">
+          <div class="project-venue">arXiv preprint, 2026</div>
+          <h1>MorphPatch: Enhancing VR Interaction on Shape Displays using Surface Approximation and Visuo-Haptic Illusions</h1>
+          <div class="project-authors">
+            <a href="https://wy-blacksheep.github.io/">Wen Ying</a><sup>1</sup>,
+            <a href="https://critbear.github.io/">KyeongMin Kim</a><sup>2</sup>,
+            <a href="https://adildsw.com/">Adil Rahman</a><sup>1</sup>,
+            <a href="https://tjswodud.github.io/">JaeYoung Seon</a><sup>3</sup>,
+            <a href="https://siamiz88.github.io/">HyeongYeop Kang</a><sup>2</sup>,
+            and
+            <a href="https://seongkookheo.com/">Seongkook Heo</a><sup>4</sup>
+          </div>
+          <div class="project-affiliation">
+            <sup>1</sup>University of Virginia,
+            <sup>2</sup>Korea University,
+            <sup>3</sup>Kyung Hee University, and
+            <sup>4</sup>UNIST
+          </div>
+          <div class="project-links">
+            <a class="project-button" href="assets/MorphPatch-arXiv.pdf"><i class="bi bi-file-earmark-pdf"></i>Paper</a>
+            <a class="project-button" href="#video"><i class="bi bi-play-btn"></i>Video</a>
+            <a class="project-button" href="#result-highlights"><i class="bi bi-bar-chart-line"></i>Highlights</a>
+            <a class="project-button" href="#citation" id="project-bibtex-trigger"><i class="bi bi-blockquote-left"></i>Citation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec-wrapper">
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <img class="project-teaser" src="assets/MorphPatch_Teaser.jpg" alt="MorphPatch combines a dynamic shape display with pen redirection for on-surface VR interaction">
+            <p class="project-caption">MorphPatch combines a dynamic shape display with visuo-haptic pen redirection, enabling users to interact as if they were directly touching a virtual object surface.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Abstract</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              On-surface interaction in Virtual Reality improves input performance through physical support and tactile feedback, but current shape displays are constrained by limited resolution. This can misalign physical and virtual surfaces, degrading usability and user experience.
+            </p>
+            <p>
+              We present <b>MorphPatch</b>, a system that enables real-time alignment between a dynamic shape display and virtual surfaces. MorphPatch uses a Signed Distance Field-based <b>surface approximation pipeline</b> to find practical alignments for diverse geometries.
+            </p>
+            <p>
+              For residual discrepancies, MorphPatch incorporates <b>pen redirection</b> with <b>visuo-haptic illusion</b> to perceptually compensate for misalignment. Three evaluations show improved geometric alignment, tolerable redirection thresholds, and better control, surface guidance, and modeling results over mid-air and tablet-like interaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="video">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Video</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <div class="project-video">
+              <video controls playsinline preload="metadata">
+                <source src="assets/MorphPatch_Video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">MorphPatch System</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              MorphPatch supports on-surface interaction with diverse virtual objects using a low-resolution, kinematically constrained shape-changing device. The system combines <b>VRScroll hardware</b>, real-time <b>surface approximation</b>, and <b>visuo-haptic pen redirection</b>.
+            </p>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">VRScroll Hardware</h3>
+            <p class="project-copy project-lead">VRScroll provides a morphable physical proxy for virtual surfaces.</p>
+            <img class="project-figure" src="assets/vrscroll_hardware.jpg" alt="VRScroll shape-changing device hardware">
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Surface Approximation</h3>
+            <p class="project-copy project-lead">Surface approximation aligns the proxy with local virtual geometry in real time.</p>
+            <img class="project-figure" src="assets/Approximation_Config_Process_shorter.png" alt="MorphPatch surface approximation process">
+            <div class="project-copy">
+              <p>
+                We evaluated surface approximation on <b>8 target geometries</b> using Mean Surface Distance (MSD) and Hausdorff Distance (HD). MorphPatch generally reduced approximation error compared with the collision-based simulation baseline, with the largest benefit on complex shapes such as stairs and curved stairs.
+              </p>
+              <img class="project-figure" src="assets/shape_approximation_results.png" alt="Technical evaluation results of MorphPatch surface approximation">
+              <p class="project-caption">Technical evaluation results of surface approximation. MSD: Mean Surface Distance, HD: Hausdorff Distance. Units are in millimeters.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col">
+            <h3 class="project-subsection-title">Pen Redirection</h3>
+            <p class="project-copy project-lead">Pen redirection maps physical pen contact on VRScroll to the target virtual surface to compensate for residual shape mismatch.</p>
+            <img class="project-figure" src="assets/pen_redirection_v4.png" alt="MorphPatch pen redirection with visuo-haptic illusion">
+            <p class="project-copy">
+              The perceptual studies measured when users noticed <b>positional</b> and <b>rotational redirection</b> while tracing curved and angled virtual surfaces.
+            </p>
+            <img class="project-figure" src="assets/pen_redirection_dt_v2.png" alt="MorphPatch perceptual evaluation results for pen redirection">
+            <div class="project-copy">
+              <p>Results identified detection thresholds (DT) for pen redirection, helping MorphPatch preserve a natural pen-on-surface experience:</p>
+              <ul>
+                <li><b>Positional redirection:</b> up to <b>50 mm</b> (maximum tested; below DT)</li>
+                <li><b>Rotational redirection:</b> up to <b>64.87&deg;</b> (DT for concave angled surfaces)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="result-highlights">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title project-highlights-title">Study Highlights</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">0.7154</div>
+              <div>MorphPatch achieved the highest median DINO similarity to the reference model.</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">4.5/5</div>
+              <div>was the median rating for MorphPatch surface reproduction in the creative task.</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-wrapper">
+            <div class="project-metric">
+              <div class="project-metric-value">6/12</div>
+              <div>participants preferred MorphPatch for realism and control.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col project-copy">
+            <p>
+              In the final comparative user study, participants used <b>MorphPatch</b>, <b>Mid-Air</b>, and <b>Tablet</b> interaction to <b>sculpt</b> and <b>sketch</b> a toy bear with non-planar surfaces.
+            </p>
+            <img class="project-figure" src="assets/sculpt_sketch_study_v2.png" alt="MorphPatch comparative study conditions for sculpting and sketching">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Creative Task Results</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <p>
+              MorphPatch supported stronger curved-surface guidance and helped participants reproduce the reference model more closely. It achieved the highest DINO similarity to the reference model, with a median score of <span class="project-stat">0.7154</span>, and reviewers ranked MorphPatch results best overall.
+            </p>
+          </div>
+        </div>
+        <div class="row section-item justify-content-center">
+          <div class="col-lg-10 col-wrapper">
+            <img class="project-figure" src="assets/bear_collection_v2.png" alt="MorphPatch sculpting and sketching result collection">
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-tracing-col project-copy">
+            <p>
+              Participants rated MorphPatch highly for surface reproduction and valued the realism and control provided by the physical surface approximation and pen redirection.
+            </p>
+            <img class="project-figure" src="assets/sculpt_sketch_subjective_ratings.png" alt="MorphPatch subjective ratings for modeling results and usability">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Takeaways</h2>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper project-copy">
+            <ul>
+              <li>MorphPatch shows that <b>perfect physical replication</b> is not required for useful on-surface VR interaction. A practical <b>surface approximation</b> from a shape display, combined with <b>visuo-haptic pen redirection</b>, can provide enough physical guidance for precise creative work.</li>
+              <li><b>Visuo-haptic pen redirection</b> can compensate for <b>residual mismatch</b> left after surface approximation. Our perceptual study found detection thresholds of up to <b>50 mm</b> for positional redirection and <b>64.87&deg;</b> for rotational redirection on concave angled surfaces, preserving a natural pen-on-surface experience despite imperfect physical replication.</li>
+              <li>The comparative study clarifies <b>trade-offs</b> between interaction modalities: <b>Mid-Air</b> interaction is flexible but tiring and less stable, <b>Tablet</b> interaction is familiar but flat, and <b>MorphPatch</b> provides curved-surface realism with stronger physical guidance.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-wrapper" id="citation">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <h2 class="section-title">Citation</h2>
+            <a data-bs-toggle="collapse" href="#project-bibtex" onclick="return false">BibTeX</a>
+          </div>
+        </div>
+        <div class="row section-item">
+          <div class="col col-wrapper">
+            <div class="collapse" id="project-bibtex">
+              <pre class="snippet"><code>@article{ying2026morphpatch,
+  title = {MorphPatch: Enhancing VR Interaction on Shape Displays using Surface Approximation and Visuo-Haptic Illusions},
+  author = {Ying, Wen and Kim, KyeongMin and Rahman, Adil and Seon, JaeYoung and Kang, HyeongYeop and Heo, Seongkook},
+  journal = {arXiv preprint},
+  year = {2026},
+  keywords = {On-surface interactions, dynamic shape display, visuo-haptic illusion, virtual reality}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="citation col-wrapper">
+      <div class="text-muted">Copyright &copy; <span id="year"></span> Wen Ying</div>
+    </footer>
+  </div>
+</body>
+
+<script defer src="js/script.js"></script>
+
+</html>
